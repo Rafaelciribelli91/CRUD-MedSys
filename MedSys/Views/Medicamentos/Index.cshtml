@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MedSys.Models.Medicamentos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h4>Medicamentos</h4>
+
+<p>
+    <a asp-action="Create">Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeMedicamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoteMedicamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoMedicamento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeMedicamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoteMedicamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoMedicamento)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
