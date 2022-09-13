@@ -11,6 +11,9 @@ Sistema de gerenciamento de medicamentos
 ### Tecnologias utilizadas:
 
 - C#
+- HTML
+- CSS
+- JavaScript
 - SQL Server (banco de dados)
 
 ### Pacotes instalados:
